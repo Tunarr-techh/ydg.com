@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Anti Waste</title>
+</head>
+
+<body>
+
+    <section class="section-1 mainer" id="section-1">
+        <div class="wrap">
+            <header>
+                <nav>
+                    <a href="index.html">
+                     <img src="bg.jpeg" alt="" width="165" height="67">
+                    </a>
+                    <div class="buttons">
+                      <button href="" class="btn-1 btn" id="login" onclick="loginNav()">Login</button>
+                      <button href="" class="btn-2 btn" id="register" onclick="registerNav()">Register</button>
+                    </div>
+                    <ul>
+                        <li><a href="">News</a></li>
+                        <li><a href="">Cause</a></li>
+                        <li><a href="">Who I am ?</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="main" id="mainer" onclick="salam()"></div>
+            <div class="login register" id="logreg">
+                <h1 id="txt">Login</h1>
+                 <form action="">
+                     <input type="text" name="" id="name_input" placeholder="Name..">
+                     <input type="password" name="" id="sname_input" placeholder="Surname..">
+                     <input type="text" name="" id="" placeholder="Email.." required>
+                     <input type="password" name="" id="" placeholder="Password.." required>
+                     <button class="btn_login">Login</button>
+                 </form> 
+            </div>
+        </div>
+        <div class="elements">
+            <h1 class="ygs">SDG</h1>
+            <div class="ygs_collection">
+               <div class="box box-1"><a href=""></a></div>
+               <div class="box box-2""><a href=""></a></div>
+               <div class="box box-3""><a href=""></a></div>
+               <div class="box box-4""><a href=""></a></div>
+               <div class="box box-5""><a href=""></a></div>
+               <div class="box box-6""><a href=""></a></div>
+               <div class="box box-7""><a href=""></a></div>
+               <div class="box box-8""><a href=""></a></div>
+               <div class="box box-9""><a href=""></a></div>
+               <div class="box box-10""><a href=""></a></div>
+               <div class="box box-11""><a href=""></a></div>
+               <div class="box box-12""><a href=""></a></div>
+               <div class="box box-13""><a href=""></a></div>
+               <div class="box box-14""><a href=""></a></div>
+               <div class="box box-15""><a href=""></a></div>
+               <div class="box box-16""><a href=""></a></div>
+               <div class="box box-17""><a href=""></a></div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+    let login = document.getElementById("login");
+    let register = document.getElementById("register");
+    let container = document.getElementById("logreg");
+    let section_1 = document.getElementById("section-1");
+    let mainer = document.getElementById("mainer");
+    let text = document.getElementById("txt");
+    let name = document.getElementById("name_input");
+    let sname = document.getElementById("sname_input")
+
+
+    function loginNav() {
+        container.style.margin="100px auto 0 auto"; 
+        text.innerHTML="Login"
+        sname.style.display="none";
+        name.style.display="none";
+        basanda(mainer);
+        
+    }
+    function registerNav() {
+        container.style.margin="100px auto 0 auto"; 
+        text.innerHTML="Register"
+        sname.style.display="block";
+        name.style.display="block";
+        basanda(mainer);
+    }
+
+    function salam() {
+       container.style.margin="-1000px auto 0 auto"
+       gedende(mainer);
+    
+    }
+
+    function basanda(x){
+      x.style.top="0"
+    }
+
+    function gedende(y) {
+        y.style.top="-1000px"
+    }
+
+
+</script>
+
+
+</body>
+
+</html>

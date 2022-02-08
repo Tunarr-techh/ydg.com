@@ -1,0 +1,355 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
+.section-1 {
+    width: 100%;
+    height: 100vh;
+    background-color: #96C09C;
+    position: relative;
+    z-index: 99;
+    /* background-image: linear-gradient(to right,#98C09D,rgb(20, 28, 61)); */
+}
+
+.wrap{
+    width: 100%;
+    height: 25vh;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+nav img {
+
+}
+nav ul {
+    margin-top: 22px;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    text-align: center;
+    margin-left: 3px;
+}
+nav ul a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 10px;
+    font-size: 23px;
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 400 ;
+
+}
+
+nav > a {
+    width: 190px;
+    height: 68px;
+    margin-left: 70px;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+nav li::after {
+    content: '';
+    display: block;
+    margin: 10px auto auto auto;
+    transition: 900ms all;
+    background-color: #3C8044;
+    width: 0;
+    height: 2px;
+}
+
+nav li:hover::after {
+    width: 100%;
+}
+.buttons {
+    width: 320px;
+    /* border: 1px solid firebrick; */
+    height: 50px;
+    order: 1;
+    margin-top: 5px;
+    justify-content: center;
+    display: flex;
+    margin-right: 10px;
+}
+
+.buttons .btn {
+    width: 149px;
+    height: 100%;
+    border-radius: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'Source Serif Pro', serif;
+    font-size: 1.7rem;
+    color: #000;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.btn-1 {
+    border: 1px solid rgba(255, 0, 0, 0.561);
+    margin-right: 8px;
+    box-shadow: 0 7px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+.btn-1:hover {
+    box-shadow: 0 5px 17px 0 rgba(0, 128, 0, 0.445), 0 4px 20px 0 rgba(0, 128, 0, 0.287);
+}
+.btn-2:hover {
+    box-shadow: 0 5px 17px 0 rgba(128, 0, 0, 0.534), 0 4px 20px 0 rgba(128, 0, 0, 0.507);
+}
+.btn-2 {
+    border: 1px solid rgba(210, 105, 30, 0.726);
+    box-shadow: 0 7px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+.main {
+    width: 100vw;
+    height: 100%;
+    top: -1000px;
+    /* margin-top: 0px; */
+    transition: 900ms all;
+    position: fixed;
+    z-index: 99;
+    background-color: rgba(36, 29, 29, 0.555);
+}
+
+.login {
+    width: 21%;
+    margin: -1000px auto 0 auto;
+    background-color: #222;
+    position: sticky;
+    z-index: 99;
+    border-radius: 10px;
+    transition: 1000ms all;
+    height: 50vh;
+}
+.login h1 {
+    text-align: center;
+    font-size: 2.9rem;
+    transform: translateY(10px);
+    color: #fff;
+    font-family: 'Source Serif Pro', serif;
+}
+
+form {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"] {
+    width: 94%;
+    height: 34px;
+    background-color: transparent;
+    outline: 0;
+    color: #fff;
+    font-weight: 600;
+    padding-left: 10px;
+    border: 2px solid green;
+    border-radius: 30px;
+}
+
+input[type="text"]:focus {
+    box-shadow: 0 7px 16px 0 rgb(43, 112, 43), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+input[type="password"]:focus {
+    box-shadow: 0 7px 16px 0 rgb(43, 112, 43), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+input[type="password"] {
+    width: 94%;
+    height: 34px;
+    background-color: transparent;
+    outline: 0;
+    color: #fff;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    border: 2px solid green;
+    border-radius: 30px;
+}
+
+
+.btn_login {
+    width: 94%;
+    height: 32px;
+    margin-top: 30px;
+    color: #fff;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: #3C8044;
+    border: 0;
+    outline: 0;
+}
+
+.btn_login:hover {
+    background-color: #42ac4e;
+}
+
+.elements {
+  width: 100%;
+  height: 65vh;
+  display: flex;
+  justify-content: center;
+  background-color: teal;
+}
+
+.ygs_collection {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto 0 auto 0;
+    width: 800px;
+    margin-top: 70px;
+    height: 500px;
+}
+
+.box {
+    width: 125px;
+    margin: 1px 4px 1px 4px;
+    height: 137px;
+    background-color: red;
+}
+
+.box a {
+   display: block;
+   width: 100%;
+   background-position: center;
+   transition: transform 700ms;
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 100%;
+}
+.box a:hover {
+    transform: scale(1.1);
+}
+
+.ygs {
+    color: #fff;
+    text-align: center;
+    font-size: 27px;
+    left: 50%;
+    letter-spacing: 1px;
+    transform: translateX(-50%);
+    font-family: 'Source Serif Pro', serif;
+    margin-bottom: 10px;
+    position: absolute;
+    height: 45px;
+    /* margin: 0 auto 0 auto; */
+}
+
+.box-1 a {
+    background-image: url("https://azerbaijan.un.org/profiles/undg_country/themes/custom/undg/images/SDGs/az/SDG-1.svg");
+}
+.box-2 a {
+    background-image: url("https://azerbaijan.un.org/profiles/undg_country/themes/custom/undg/images/SDGs/az/SDG-2.svg");
+}
+.box-3 a {
+    background-image: url("https://azerbaijan.un.org/profiles/undg_country/themes/custom/undg/images/SDGs/az/SDG-3.svg");
+}
+.box-4 a {
+    background-image: url("https://azerbaijan.un.org/profiles/undg_country/themes/custom/undg/images/SDGs/az/SDG-4.svg");
+}
+.box-5 a {
+    background-image: url("https://azerbaijan.un.org/profiles/undg_country/themes/custom/undg/images/SDGs/az/SDG-5.svg");
+}
+.box-6 a {
+    background-image: url("https://azerbaijan.un.org/profiles/undg_country/themes/custom/undg/images/SDGs/az/SDG-6.svg");
+}
+.box-7 a {
+    background-image: url("https://azerbaijan.un.org/profiles/undg_country/themes/custom/undg/images/SDGs/az/SDG-7.svg");
+}
+.box-8 a {
+    background-image: url("https://azerbaijan.un.org/profiles/undg_country/themes/custom/undg/images/SDGs/az/SDG-8.svg");
+}
+.box-9 a {
+    background-image: url("https://azerbaijan.un.org/profiles/undg_country/themes/custom/undg/images/SDGs/az/SDG-9.svg");
+}
+.box-10 a {
+    background-image: url("https://azerbaijan.un.org/profiles/undg_country/themes/custom/undg/images/SDGs/az/SDG-10.svg");
+}
+.box-11 a {
+    background-image: url("https://azerbaijan.un.org/profiles/undg_country/themes/custom/undg/images/SDGs/az/SDG-11.svg");
+}
+.box-12 a {
+    background-image: url("https://azerbaijan.un.org/profiles/undg_country/themes/custom/undg/images/SDGs/az/SDG-12.svg");
+}
+.box-13 a {
+    background-image: url("https://azerbaijan.un.org/profiles/undg_country/themes/custom/undg/images/SDGs/az/SDG-13.svg");
+}
+.box-14 a {
+    background-image: url("https://azerbaijan.un.org/profiles/undg_country/themes/custom/undg/images/SDGs/az/SDG-14.svg");
+}
+.box-15 a {
+    background-image: url("https://azerbaijan.un.org/profiles/undg_country/themes/custom/undg/images/SDGs/az/SDG-15.svg");
+}
+.box-16 a {
+    background-image: url("https://azerbaijan.un.org/profiles/undg_country/themes/custom/undg/images/SDGs/az/SDG-16.svg");
+}
+.box-17 a {
+    background-image: url("https://azerbaijan.un.org/profiles/undg_country/themes/custom/undg/images/SDGs/az/SDG-17.svg");
+}
+
+
+@media screen and (max-width: 1250px) and (min-width: 800px) {
+    .elements {
+       height: 70vh;
+    }
+    nav > a {
+        width: 90px;
+        height: 60px;
+        margin-left: 28px;
+        margin-top: 5px;
+    }
+    nav ul a {
+        font-size: 20px;
+    }
+    .buttons .btn {
+        font-size: 19px;
+        width: 139px;
+    }
+
+    .login {
+        width: 35%;
+        height: 60vh;
+    }
+    .login h1  {
+        font-size: 2.6rem;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
