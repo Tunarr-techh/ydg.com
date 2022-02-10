@@ -1,21 +1,25 @@
 html,body {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
     text-decoration: none;
+    overflow-x: hidden
 }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
 .section-1 {
     width: 100%;
     height: 100vh;
     background-color: #96C09C;
     position: relative;
-    z-index: 99;
+    z-index: 40;
     /* background-image: linear-gradient(to right,#98C09D,rgb(20, 28, 61)); */
 }
 
 .wrap{
     width: 100%;
     height: 25vh;
+    /* background-color: red; */
 }
 nav {
     display: flex;
@@ -42,6 +46,18 @@ nav ul a {
     font-family: 'Source Serif Pro', serif;
     font-weight: 400 ;
 
+}
+
+nav ul button {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 10px;
+    font-size: 23px;
+    font-family: 'Source Serif Pro', serif;
+    border: 1px solid salmon;
+    background-color: transparent;
+    outline: none;
+    font-weight: 400 ;
 }
 
 nav > a {
@@ -94,9 +110,9 @@ nav li:hover::after {
 }
 
 .btn-1 {
-    border: 1px solid rgba(255, 0, 0, 0.561);
+    border: 1px solid #fff;
     margin-right: 8px;
-    box-shadow: 0 7px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    box-shadow: 0 7px 16px 0 #fff, 0 6px 20px 0 #fff;
 }
 .btn-1:hover {
     box-shadow: 0 5px 17px 0 rgba(0, 128, 0, 0.445), 0 4px 20px 0 rgba(0, 128, 0, 0.287);
@@ -105,8 +121,8 @@ nav li:hover::after {
     box-shadow: 0 5px 17px 0 rgba(128, 0, 0, 0.534), 0 4px 20px 0 rgba(128, 0, 0, 0.507);
 }
 .btn-2 {
-    border: 1px solid rgba(210, 105, 30, 0.726);
-    box-shadow: 0 7px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    border: 1px solid #fff;
+    box-shadow: 0 7px 16px 0 #fff, 0 6px 20px 0 #fff;
 }
 
 .main {
@@ -123,7 +139,7 @@ nav li:hover::after {
 .login {
     width: 21%;
     margin: -1000px auto 0 auto;
-    background-color: #222;
+    background-color: #fff;
     position: sticky;
     z-index: 99;
     border-radius: 10px;
@@ -134,7 +150,8 @@ nav li:hover::after {
     text-align: center;
     font-size: 2.9rem;
     transform: translateY(10px);
-    color: #fff;
+    color: green;
+    background-color: #fff;
     font-family: 'Source Serif Pro', serif;
 }
 
@@ -202,30 +219,33 @@ input[type="password"] {
   height: 65vh;
   display: flex;
   justify-content: center;
-  background-color: teal;
+  border: 1px solid rebeccapurple;
+  background-color: #96C09C;
 }
 
 .ygs_collection {
     display: flex;
     flex-wrap: wrap;
     margin: auto 0 auto 0;
-    width: 800px;
+    width: 1100px;
+    justify-content: center;
     margin-top: 70px;
+    padding: 10px;
     height: 500px;
 }
 
 .box {
-    width: 125px;
+    width: 150px;
     margin: 1px 4px 1px 4px;
-    height: 137px;
-    background-color: red;
+    height: 160px;
+    /* background-color: red; */
 }
 
 .box a {
    display: block;
    width: 100%;
    background-position: center;
-   transition: transform 700ms;
+   transition: transform 800ms;
    background-repeat: no-repeat;
    background-size: cover;
    height: 100%;
@@ -237,9 +257,8 @@ input[type="password"] {
 .ygs {
     color: #fff;
     text-align: center;
-    font-size: 27px;
+    font-size: 28px;
     left: 50%;
-    letter-spacing: 1px;
     transform: translateX(-50%);
     font-family: 'Source Serif Pro', serif;
     margin-bottom: 10px;
@@ -301,9 +320,9 @@ input[type="password"] {
 }
 
 
-@media screen and (max-width: 1250px) and (min-width: 800px) {
+@media screen and (max-width: 1300px) and (min-width: 800px) and (min-height: 750px) and (max-height: 900px) {
     .elements {
-       height: 70vh;
+       height: 77vh;
     }
     nav > a {
         width: 90px;
@@ -330,11 +349,519 @@ input[type="password"] {
 }
 
 
+@media screen and (max-width: 1400px) and (min-width: 1300px) and (min-height: 750px) and (max-height: 900px) {
+     .elements {
+         height: 80vh;
+     }
+     .buttons .btn {
+        font-size: 19px;
+        width: 139px;
+    }
+
+    .login {
+        width: 33%;
+        height: 57vh;
+    }
+    .login h1  {
+        font-size: 2.6rem;
+    }
+}
+
+/* section-1 end */
 
 
+.section-2 {
+    width: 100%;
+    height: 100vh;
+    background-color: #96C09C;
+}
+
+.wrap-2 {
+    width: 100%;
+    height: 70vh;
+    padding-top: 10px;
+    background-color: #96C09C;
+}
+
+.news_container {
+    width: 100%;
+    height: 57vh;
+    display: flex;
+    justify-content: center;
+    /* background-color: #42ac4e; */
+}
+
+.news {
+    width: 400px;
+    margin: 0 10px 0 5px;
+    height: 500px;
+    background-color: #fff;
+}
 
 
+.news_image {
+    width: 100%;
+    text-align: center;
+    height: 170px;
+    transition: 500ms all;
+ 
+}
 
+.news_image img {
+    /* clip-path: circle(37.9% at 50% 50%); */
+    transition: 500ms transform;
+
+}
+
+.news_image:hover{
+    transform: scale(1.1);
+}
+
+.information {
+    width: 95%;
+    padding: 10px;
+    height: 27vh;
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+.information p {
+    font-size: 18px;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+
+.chat-bot {
+    width: 375px;
+    height: 600px;
+    position: fixed;
+    right: 4px;
+    transition: 800ms right;
+    overflow: hidden;
+    z-index: 45;
+    border-radius: 10px;
+    bottom: 30px;
+    background-color: #fff;
+}
+
+.button-chat {
+    width: 47px;
+    height: 45px;
+    background-image: url("icon-2_50px.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 30px;
+    cursor: pointer;
+    display: none;
+    margin-top: 545px;
+    margin-left: 5px;
+    
+}
+
+
+.close-chat-button {
+    width: 47px;
+    height: 45px;
+    background-image: url("icon-50px.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid rgba(36, 29, 29, 0.555);
+    align-self: flex-start;
+    float: right;
+    margin-top: 3px;
+    border-radius: 30px;
+    margin-bottom: 2px;
+    cursor: pointer;
+} 
+.profile {
+    width: 40px;
+    height: 40px;
+    background-image: url("robot.png");
+    transform: translateY(5px);
+    /* display: none; */
+    /* opacity: 0; */
+    margin-left: 3px;
+}
+
+.button-color {
+    background-color: #42ac4e!important;
+    border: 0!important;
+}
+
+
+.message {
+    width: 100%;
+    height: 56vh;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.reply
+{
+    width: 100%;
+    margin-top: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* background-color: aquamarine; */
+    height: 105px;
+}
+
+.answer {
+    width: 100%;
+    margin-top: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* background-color: aquamarine; */
+    height: 105px;
+}
+
+
+.massage-text {
+    /* background-color: red; */
+    display: flex;
+    margin-right: 3px;
+    justify-content: flex-end;
+    width: 15vw;
+}
+
+#message-text-1 {
+    font-size: 17px;
+    text-align: center;
+    display: inline-block;
+    line-height: 33px;
+    background-color: #42ac4e;
+    transform: translateY(-3px);
+    margin-right: -100px;
+    transition: 900ms all;
+    transform: rotate(0);
+    padding: 7px;
+    animation: animasiya 3s 1;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
+
+.message-text-2 {
+    margin-left: 3px;
+    margin-right: 10px;
+}
+
+.message-text-2 p {
+    background-color: royalblue!important;
+    color: #fff!important;
+}
+
+.hand {
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    transform: translateY(2px) translateX(-3px);
+    background-position: center bottom;
+    background-image: url("salamla.png");
+}
+
+.reply_box-4 {
+    justify-content: flex-start;
+}
+
+#chat-input,
+#chat-input-2 {
+    width: 97%;
+    height: 45px;
+    background-color: salmon;
+    /* margin-left: ; */
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 1px;
+    align-self: center;
+    border: 1px solid salmon;
+}
+
+#chat-input-2 {
+    display: none;
+}
+#chat-input:hover {
+    background-color: rgb(248, 153, 142);
+}
+#form {
+    width: 100%;
+    margin-top: 0;
+}
+
+.message_box-3 {
+    height: 147px;
+}
+
+.reply_box-4 {
+    height: 70px;
+    align-items: flex-end;
+}
+
+#message-text-3 {
+    font-size: 16px;
+    text-align: center;
+    display: inline-block;
+    line-height: 26px;
+    text-align: left;
+    transition: 1200ms transform;
+    background-color: #42ac4e!important;
+    transform: translateY(-3px) translateX(-390px);
+    padding: 5px;
+}
+
+#message-text-2 {
+    font-size: 17px;
+    text-align: center;
+    display: inline-block;
+    transition: 4000ms margin-left;
+    line-height: 33px;
+    background-color: #42ac4e!important;
+    transform: translateY(-3px);
+    margin-left: -2000px;
+    transition: 1800ms margin-left;
+    padding: 7px;
+}
+
+
+@media (max-width: 1200px) and (min-width: 1000px) and (max-height: 730px) and (min-height: 650px) {
+    .box {
+        width: 135px;
+        height: 145px;
+    }
+
+    .chat-bot  {
+        width: 300px;
+    }
+    .elements {
+        height: 88vh;
+    }
+    .news {
+        width: 334px;
+        margin: 0 10px 0 5px;
+        height: 397px;
+    }
+
+    .news_container {
+      margin-top: 150px;
+    }
+
+    .buttons .btn {
+        font-size: 1.5rem ;
+    }
+    nav ul a {
+        font-size: 20px;
+    }
+    nav ul button {
+        font-size: 21px;
+    }
+
+    #message-text-3 {
+        line-height: 20px;
+        font-size: 15;
+    }
+    #message-text-1 {
+        font-size: 15px;
+    }
+
+    #message-text-2 {
+        font-size: 15px;
+    }
+    #message-text-3 {
+        font-size: 10px;
+        padding: 4px;
+        font-weight: 500;
+        line-height: 19px;
+    }
+    .message-text-2 {
+        margin-left: -1px;
+    }
+    .reply_box-4 {
+    margin: 45px auto 0 auto;
+        width: 90%;
+    }
+
+    #chat-input {
+        font-size: 15px;
+    }
+
+    .close-chat-button {
+        width: 42px;
+        height: 40px;
+        border: 0;
+        margin-right: 2px;
+    }
+    .profile {
+        width: 34px;
+        height: 34px;
+        background-size: cover;
+    }
+
+    #form {
+        width: 96%;
+    }
+
+    .ygs {
+        font-size: 25px;
+    }
+    .information p  {
+        font-size: 17px;
+    }
+    input[type="text"]  {
+        width: 85%;
+        color: #000;
+        height: 28px;
+
+    }
+
+    input[type="password"] {
+        width: 85%;
+        font-size: 15px;
+        height: 28px;
+        color: #000;
+    }
+
+    .txt {
+        font-size: 2.6rem ;
+    }
+
+    .login h1 {
+        font-size: 2.6rem ;
+    }
+
+    form {
+        margin-top: 2px;
+    }
+
+    .btn_login {
+        margin-top: 6px;
+    }
+}
+
+
+@media (max-width: 1200px) and (min-width: 1000px) and (max-height: 649px) and (min-height: 600px) {
+    .box {
+        width: 135px;
+        height: 145px;
+    }
+
+    .chat-bot  {
+        width: 265px;
+        height: 540px;
+    }
+    .elements {
+        height: 93vh;
+    }
+    .news {
+        width: 334px;
+        margin: 0 10px 0 5px;
+        height: 397px;
+    }
+
+    .news_container {
+      margin-top: 240px;
+    }
+
+    .buttons .btn {
+        font-size: 1.5rem ;
+    }
+    nav ul a {
+        font-size: 18px;
+    }
+    nav ul button {
+        font-size: 20px;
+    }
+
+    #message-text-3 {
+        line-height: 20px;
+        font-size: 15;
+    }
+
+    #message-text-1 {
+        font-size: 15px;
+    }
+
+    #message-text-2 {
+        font-size: 15px;
+    }
+    #message-text-3 {
+        font-size: 10px;
+        padding: 4px;
+        font-weight: 500;
+        line-height: 19px;
+    }
+    .message-text-2 {
+        margin-left: -1px;
+    }
+    .reply_box-4 {
+    margin: 45px auto 0 auto;
+        width: 90%;
+    }
+
+    #chat-input {
+        font-size: 15px;
+    }
+
+    .close-chat-button {
+        width: 42px;
+        height: 40px;
+        border: 0;
+        margin-right: 2px;
+    }
+    .profile {
+        width: 34px;
+        height: 34px;
+        background-size: cover;
+    }
+
+    #form {
+        width: 96%;
+    }
+
+    .ygs {
+        font-size: 25px;
+    }
+    .information p  {
+        font-size: 17px;
+    }
+    input[type="text"]  {
+        width: 85%;
+        color: #000;
+        height: 28px;
+
+    }
+
+    input[type="password"] {
+        width: 85%;
+        font-size: 15px;
+        height: 28px;
+        color: #000;
+    }
+
+    .txt {
+        font-size: 2.6rem ;
+    }
+
+    .login h1 {
+        font-size: 2.6rem ;
+    }
+
+    form {
+        margin-top: 2px;
+    }
+
+    .btn_login {
+        margin-top: 6px;
+    }
+}
 
 
 

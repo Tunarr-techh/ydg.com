@@ -19,13 +19,13 @@
                      <img src="bg.jpeg" alt="" width="165" height="67">
                     </a>
                     <div class="buttons">
-                      <button href="" class="btn-1 btn" id="login" onclick="loginNav()">Login</button>
-                      <button href="" class="btn-2 btn" id="register" onclick="registerNav()">Register</button>
+                      <button href="" class="btn-1 btn" id="login" onclick="loginNav()">Giriş</button>
+                      <button href="" class="btn-2 btn" id="register" onclick="registerNav()">Qeydiyyat</button>
                     </div>
                     <ul>
-                        <li><a href="">News</a></li>
-                        <li><a href="">Cause</a></li>
-                        <li><a href="">Who I am ?</a></li>
+                        <li><a href="">Ana Səhifə</a></li>
+                        <li><a href="#section-2">Xəbərlər</a></li>
+                        <li><button href="" onclick="chatbotOpen()">Robot</button></li>
                     </ul>
                 </nav>
             </header>
@@ -37,12 +37,12 @@
                      <input type="password" name="" id="sname_input" placeholder="Surname..">
                      <input type="text" name="" id="" placeholder="Email.." required>
                      <input type="password" name="" id="" placeholder="Password.." required>
-                     <button class="btn_login">Login</button>
+                     <button class="btn_login" id="change_button">Giriş</button>
                  </form> 
             </div>
         </div>
         <div class="elements">
-            <h1 class="ygs">SDG</h1>
+            <h1 class="ygs">Dayanıqlı inkişaf məqdəsləri</h1>
             <div class="ygs_collection">
                <div class="box box-1"><a href=""></a></div>
                <div class="box box-2""><a href=""></a></div>
@@ -64,11 +64,73 @@
             </div>
         </div>
     </section>
+<!-- section 2 -->
+    <section class="section-2" id="section-2">
+          <div class="wrap-2">
+              <div class="news_container">
+                  <div class="news_1 news">
+                      <div class="news_image">
+                         <img src="photo-4.jpeg" alt="" width="331" height="180">
+                      </div>
+                      <div class="information">
+                           <p>Act Now! Iqlim dəyişikliyinə qarşı mübarizə üçün süperqəhramanlar.Səndə öz qəhramanını yarat!</p>
+                      </div>
+                  </div>
+                  <div class="news_2 news">
+                    <div class="news_image">
+                        <img src="photo-3.jpeg" alt="" width="331" height="180">
+                     </div>
+                     <div class="information">
+                          <p>DİM 13ün əhəmiyyəti</p>
+                          </div>
+                  </div>
 
 
+                  <div class="news_3 news">   <div class="news_image">
+                         <img src="photo-2.jpeg" alt="" width="201" height="175">
+                      </div>
+                      <div class="information">
+                           <p>Gələcək üçün cümlələr!</p>
+                           </div>
+                    </div>
+              </div>
+              <div class="chat-bot" id="chat-bot">
+                  <div class="button-chat" id="chat-button" onclick="chatbotOpen()"></div>
+                  <div class="close-chat-button" id="close-chat" onclick="chatbotClose()"></div>
+                  <div class="profile" title="Robot" id="robot"></div>
+                  <div class="message">
+        
+                        <div class="message_box-1 reply">
+                            <div class="massage-text">
+                                <p id="message-text-1">Salam</p>
+                            </div>
+                        </div>
+                        <div class="reply_box-2 answer">
+                            <div class="message-text-2">
+                                <p id="message-text-2">Salam! Xoş gəldiniz...</p>
+                            </div>
+                        </div>
+                        <div class="message_box-3 reply">
+                            <div class="message-text-2">
+                                <p id="message-text-3">Dayanıqlı İnkişaf Məqsədi 13 iqlim dəyişikliyi və onun təsirləri ilə mübarizə aparmaq üçün tədbirlər görməyə çağırır.  İqlim dəyişikliyi   həyatlara, insanlara, ölkələrə təsir edir.
+                                       Səndə bizə qatıl və bu problemi aradan qaldırmağımıza kömək et!</p>
+                            </div>
+                        </div>
 
-
-
+                        <div class="reply_box-4 answer">
+                            <form action="" id="form">
+                                <button type="button" name="" id="chat-input" class="button-color" value="" onclick="newMessage()">
+                                    Salam!
+                                </button>
+                                <button type="button" name="" id="chat-input-2" class="button-color" value="" onclick="newMessage_2()">
+                                    DİM 13 nədir?
+                                </button>
+                            </form>
+                        </div>
+                  </div>
+              </div>
+          </div>
+    </section>
 
 
 
@@ -85,21 +147,33 @@
     let text = document.getElementById("txt");
     let name = document.getElementById("name_input");
     let sname = document.getElementById("sname_input")
+    let chat_button = document.getElementById("chat-button");
+    let chat_bot = document.getElementById("chat-bot");
+    let close_chat = document.getElementById("close-chat");
+    let chat_input = document.getElementById("chat-input");
+    let chat_input_2 = document.getElementById("chat-input-2");
+    let message_text_1 = document.getElementById("message-text-1");
+    let message_text_2 = document.getElementById("message-text-2");
+    let message_text_3 = document.getElementById("message-text-3");
+    let change_button = document.getElementById("change_button");
+   
 
 
     function loginNav() {
         container.style.margin="100px auto 0 auto"; 
-        text.innerHTML="Login"
+        text.innerHTML="Giriş"
         sname.style.display="none";
         name.style.display="none";
+        change_button.innerHTML="Giriş"
         basanda(mainer);
         
     }
     function registerNav() {
         container.style.margin="100px auto 0 auto"; 
-        text.innerHTML="Register"
+        text.innerHTML="Qeydiyyat"
         sname.style.display="block";
         name.style.display="block";
+        change_button.innerHTML="Qeydiyyat"
         basanda(mainer);
     }
 
@@ -116,6 +190,41 @@
     function gedende(y) {
         y.style.top="-1000px"
     }
+
+    function chatbotOpen() {
+        chat_bot.style.right="0";
+        chat_button.style.display="none";
+    }
+
+    function chatbotClose() {
+        chat_bot.style.right="-315px";
+        document.getElementById("robot").style.marginTop="5px"
+        chat_button.style.display="block"; 
+    }
+
+    function newMessage() {
+        message_text_1.style.marginRight="4px";
+        chat_input.style.display="none";
+        chat_input_2.style.display="block";
+        gelsin(message_text_2); 
+    }
+
+    function newMessage_2() {
+        message_text_3.style.transform="translateX(4px)";
+    }
+
+
+    function gelsin(x) {
+        x.style.margin="0 0 0 3px"
+    }
+
+   
+
+
+
+
+
+
 
 
 </script>
